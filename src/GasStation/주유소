@@ -1,0 +1,36 @@
+	주유소 만들기
+
+	운전자: 잔액
+	
+	차(Avante, k3): 기름타입, 기름용량, 현재기름
+	drive(){입력받은 값만큼 달리기, 달린만큼 기름량 줄기}
+	
+	주유기: 잔여연료 (휘발유,경유), 기름값 (휘발유,경유)
+
+
+
+	<사용할 기술>
+	==================================
+	
+	Enhanced for loop 향상For문
+	스캐너 [Scanner] 입력받고 ArrayList 저장
+	
+	getter / setter
+	상속 [extends(super/@Override), interface(implements)]
+	추상클래스
+	강제타입변환(instanceof)
+	박싱/언박싱
+	
+	예외처리 [try catch, exception]
+	리플렉션
+	
+	math random
+	DecimalFormat
+	buffer
+	
+	제네릭
+	
+	==================================
+	어노테이션
+	Date, time 클래스
+	==================================
