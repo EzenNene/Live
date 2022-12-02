@@ -6,13 +6,14 @@ import java.util.ArrayList;
 public class School {
 	
 	// 내부에 school 객체를 생성해준다
-	private static School instance = new School();
+//	private static School instance = new School();
+	private static School instance = null;
 	
 	private static String SCHOOL_NAME = "Good School"; // 학교이름
 	private ArrayList<Student> studentList = new ArrayList<>(); // 학교 총 학생
 	private ArrayList<Subject> subjectList = new ArrayList<>(); // 학교 총 과목
 	
-	// 싱글톤은 생성자가 private -> 외부에서 객체여러개 생성 못하게
+	// ★ 싱글톤은 생성자가 private -> 외부에서 객체여러개 생성 못하게
 	private School() {}
 	
 	// 싱글톤 메소드 구현 : school 객체를 리턴해준다.

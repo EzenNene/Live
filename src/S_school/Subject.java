@@ -14,7 +14,7 @@ public class Subject {
 	//register() 메서드를 호출하면 이 리스트에 추가됨
 	private ArrayList<Student> studentList = new ArrayList<Student>();
 	
-	public Subject(String subjectName, int subjectId){
+	public Subject(String subjectName, int subjectId){ // 과목이름, 과목코드
 		this.subjectName = subjectName;
 		this.subjectId = subjectId;
 		this.gradeType = Define.AB_TYPE;   //학점 평가 정책: 기본적으로 A,B 방식을 사용한다.

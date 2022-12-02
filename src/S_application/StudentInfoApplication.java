@@ -4,12 +4,13 @@ import S_school.*;
 import S_school.report.GenerateGradeReport;
 import S_utils.Define;
 
+// 전반적인 생성 담당
 public class StudentInfoApplication {
 	
 	School goodSchool = School.getInstance(); // 싱글턴 방식으로 학교 객체 리턴받고 필드에 대입
 	Subject korean; // 국어과목 생성
 	Subject math; // 수학과목 생성
-	GenerateGradeReport gradeReport = new GenerateGradeReport(); // 출력할 정보
+	GenerateGradeReport gradeReport = new GenerateGradeReport(); // 출력할 정보창 생성
 	
 	public static void main(String[] args) {
 		

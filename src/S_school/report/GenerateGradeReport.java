@@ -46,7 +46,7 @@ public class GenerateGradeReport {
 	// 몸통을 만든다
 	public void makeBody(Subject subject) {
 		// 해당과목을 수강신청한 학생 리스트를 가져온다.
-		ArrayList<Student> studentList = subject.getStudentList();
+		ArrayList<Student> studentList = school.getStudentList();
 
 		for (int i = 0; i < studentList.size(); i++) {
 			

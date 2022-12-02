@@ -45,7 +45,7 @@ class GasPump {
 	}
 	
 	public void refueling() {
-		
+		System.out.println("기름넣기");
 	}
 	
 }
@@ -57,8 +57,11 @@ public class GasStation {
 	public static void main(String[] args) {
 		
 		Driver driver = new Driver();
+		GasPump gasPump = new GasPump();
 		
 		// 주유할 차종 입력받아 생성하기
+		System.out.println("차종 입력하기");
+		System.out.println("아반떼: 1, K3 : 2");
 		Scanner scanner = new Scanner(System.in);
 		int carChoice = scanner.nextInt();
 		
@@ -69,10 +72,10 @@ public class GasStation {
 		}
 		
 		
-		GasPump gaspump = new GasPump();
 
-		GasPump.refueling();
-		Car.drive();
+		gasPump.refueling();
+		avante.drive();
+		k3.drive();
 
 	}
 

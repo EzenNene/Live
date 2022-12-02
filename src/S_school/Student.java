@@ -9,7 +9,7 @@ public class Student {
 	private Subject majorSubject;	//필수과목
 	
 	//학생이 수강한 과목의 점수 리스트
-	//addSubjectSocre() 메소드가 호출 되면 이 리스트에 추가됨
+	//addSubjectScore() 메소드가 호출 되면 이 리스트에 추가됨
 	private ArrayList<Score> scoreList = new ArrayList<Score>(); 
 	
 	public Student( int studentId, String studentName, Subject majorSubject){
