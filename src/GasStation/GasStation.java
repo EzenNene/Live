@@ -4,6 +4,47 @@ import java.util.Scanner;
 
 //======================================================
 
+public class GasStation {
+		
+	public static void main(String[] args) {
+		
+		Driver driver = new Driver();
+		GasPump gasPump = new GasPump();
+		
+		// 주유할 차종 입력받아 생성하기
+		System.out.println("차종 입력하기");
+		System.out.println("아반떼: 1, K3 : 2");
+		System.out.println();
+		
+		Scanner scanner = new Scanner(System.in);
+		int carChoice = scanner.nextInt();
+		
+		if(carChoice == 1) {
+			Car avante = new Avante(1, 60, 20);						
+		} else if (carChoice == 2) {
+			Car k3 = new K3(2, 50, 30);			
+		}
+		
+		Car avante = new Avante(1, 60, 20);	
+		Car k3 = new K3(2, 50, 30);			
+
+		if(fuelType == 1) {
+			
+		}
+		
+		gasPump.refuelingGas();
+		
+		System.out.println();
+		
+		avante.drive();
+		k3.drive();
+
+	}
+
+}
+
+//======================================================
+
 class Driver {
 	
 	public int balance = 200000;
@@ -22,11 +63,13 @@ class Car {
 	public int nowFuel;
 	
 	public Car(int fuelType, int fuelCapacity, int nowFuel) {
-		
+		this.fuelType = fuelType;
+		this.fuelCapacity = fuelCapacity;
+		this.nowFuel = nowFuel;
 	}
 	
 	public void drive() {
-		
+		System.out.println("운전합니다");
 	}
 }
 
@@ -44,39 +87,14 @@ class GasPump {
 
 	}
 	
-	public void refueling() {
-		System.out.println("기름넣기");
+	public void refuelingGas() {
+		System.out.println("휘발유 주유");
 	}
-	
+
+	public void refuelingDie() {
+		System.out.println("디젤 주유");
+	}
 }
 
 //======================================================
 
-public class GasStation {
-		
-	public static void main(String[] args) {
-		
-		Driver driver = new Driver();
-		GasPump gasPump = new GasPump();
-		
-		// 주유할 차종 입력받아 생성하기
-		System.out.println("차종 입력하기");
-		System.out.println("아반떼: 1, K3 : 2");
-		Scanner scanner = new Scanner(System.in);
-		int carChoice = scanner.nextInt();
-		
-		if(carChoice == 1) {
-			Car avante = new Avante(1, 60, 20);						
-		} else if (carChoice == 2) {
-			Car k3 = new K3(2, 50, 30);			
-		}
-		
-		
-
-		gasPump.refueling();
-		avante.drive();
-		k3.drive();
-
-	}
-
-}

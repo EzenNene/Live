@@ -9,8 +9,7 @@ public class Avante extends Car {
 	
 	@Override
 	public void drive() {
-		// TODO Auto-generated method stub
-		super.drive();
+		System.out.println("아반떼를 운전");
 	}
 	
 	

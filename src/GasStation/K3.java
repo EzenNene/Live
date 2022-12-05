@@ -7,11 +7,9 @@ public class K3 extends Car {
 		super(fuelType, fuelCapacity, nowFuel);
 	}
 	
-	
 	@Override
 	public void drive() {
-		// TODO Auto-generated method stub
-		super.drive();
+		System.out.println("K3를 운전");
 	}
 	
 }

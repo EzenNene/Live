@@ -1,0 +1,30 @@
+StudentInfoApplication
+
+	싱글턴으로 School 객체 생성
+	
+	createSubject() ==================
+	과목생성 (국어,과목코드)
+	과목생성 (수학,과목코드)
+
+	싱글턴으로 만들어진
+	School 객체의 subjectList에 대입
+	=============================
+
+	createStudent() =================
+	학생생성 (학번, 이름, 필수과목)
+
+	싱글턴으로 만들어진
+	School 객체의 studentList에 대입
+
+	각 과목 객체(korean, math)에 접근,
+	학생객체를 인자로 받는 register 함수 실행
+
+	register 함수는 Subject객체의 멤버
+	studentList에 Student객체 대입
+
+	위와같은 과정을 각 학생별로 시행
+	============================
+	
+report
+
+	
