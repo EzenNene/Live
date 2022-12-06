@@ -11,5 +11,11 @@ public class K3 extends Car {
 	public void drive() {
 		System.out.println("K3를 운전");
 	}
+
+	@Override
+	public String toString() {
+		return "K3";
+	}
+	
 	
 }

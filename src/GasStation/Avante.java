@@ -12,5 +12,10 @@ public class Avante extends Car {
 		System.out.println("아반떼를 운전");
 	}
 	
+	@Override
+	public String toString() {
+		return "Avante";
+	}
+	
 	
 }
