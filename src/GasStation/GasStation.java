@@ -6,17 +6,11 @@ import java.util.Scanner;
 
 public class GasStation {
 
-	Driver driver = new Driver();
-	GasPump gasPump = new GasPump();
-//	Scanner scanner = new Scanner(System.in); //클래스에 적용?
-	
 	public static void main(String[] args) {
 
 		// 주유할 차종 입력받아 생성하기,
 		// 생성한 차에 맞는 연료로 주유하기 (휘발유, 디젤)
 		makeCar();
-		refuelingCar();
-
 		// 생성한 차 운전하기
 
 	}
@@ -26,7 +20,7 @@ public class GasStation {
 		int carCount = 0;
 
 		while (carCount < 1) {
-			
+
 			System.out.println("기름을 넣을 차종 입력하기");
 			System.out.println("아반떼: 1, K3 : 2");
 			System.out.println();
@@ -39,11 +33,13 @@ public class GasStation {
 				System.out.println();
 				System.out.println("=== 아반떼를 뽑았습니다 ===");
 				System.out.println();
+				refuelingCar();
 			} else if (carChoice == 2) {
 				Car car = new K3(2, 50, 30);
 				System.out.println();
 				System.out.println("=== K3를 뽑았습니다 ===");
 				System.out.println();
+				refuelingCar();
 			} else {
 				System.out.println("다시 입력해 주세요");
 				System.out.println();
@@ -58,18 +54,33 @@ public class GasStation {
 
 	public static void refuelingCar() {
 		
+		System.out.println("기름을 얼마나 넣겠습니까");
+		Scanner scanner = new Scanner(System.in);
+		int fuel = scanner.nextInt();
+		
+		GasPump gasPump = new GasPump();
+		gasPump.refuelingGas();
 	}
-
+	
 }
 
 //======================================================
 
 class Driver {
 
+
 	public int balance = 200000;
 
 	public Driver() {
 
+	}
+	
+	public int getBalance() {
+		return balance;
+	}
+	
+	public void setBalance(int balance) {
+		this.balance = balance;
 	}
 
 }
@@ -97,7 +108,8 @@ class Car {
 //======================================================
 
 class GasPump {
-	
+
+
 	Scanner scanner = new Scanner(System.in);
 
 	public int gasolineLeft = 100000;
@@ -109,8 +121,8 @@ class GasPump {
 	public GasPump() {
 
 	}
-
-	public int refuelingGas(Driver driver) {
+	
+	public int refuelingGas() {
 		System.out.println("휘발유 주유");
 		System.out.println("몇 리터를 넣으시겠습니까");
 		int payMoney = scanner.nextInt();
@@ -123,6 +135,32 @@ class GasPump {
 		int payMoney = scanner.nextInt();
 		return (this.dieselLeft - (driver.balance / dieselPrice));
 	}
+	
+	
+	public int getGasolineLeft() {
+		return gasolineLeft;
+	}
+	
+	public void setGasolineLeft(int gasolineLeft) {
+		this.gasolineLeft = gasolineLeft;
+	}
+	
+	public int getDieselLeft() {
+		return dieselLeft;
+	}
+	
+	public void setDieselLeft(int dieselLeft) {
+		this.dieselLeft = dieselLeft;
+	}
+	
+	public int getGasPrice() {
+		return gasPrice;
+	}
+	
+	public int getDieselPrice() {
+		return dieselPrice;
+	}
+	
 }
 
 //======================================================
