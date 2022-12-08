@@ -34,6 +34,8 @@ public class GasStation {
 				System.out.println("=== 아반떼를 뽑았습니다 ===");
 				System.out.println();
 				refuelingCar();
+				
+				
 			} else if (carChoice == 2) {
 				Car car = new K3(2, 50, 30);
 				System.out.println();
@@ -52,15 +54,6 @@ public class GasStation {
 
 	}
 
-	public static void refuelingCar() {
-		
-		System.out.println("기름을 얼마나 넣겠습니까");
-		Scanner scanner = new Scanner(System.in);
-		int fuel = scanner.nextInt();
-		
-		GasPump gasPump = new GasPump();
-		gasPump.refuelingGas();
-	}
 	
 }
 
@@ -75,12 +68,8 @@ class Driver {
 
 	}
 	
-	public int getBalance() {
-		return balance;
-	}
-	
-	public void setBalance(int balance) {
-		this.balance = balance;
+	public void payMoney() {
+		
 	}
 
 }
@@ -122,18 +111,14 @@ class GasPump {
 
 	}
 	
-	public int refuelingGas() {
+	public void refuelingGas() {
 		System.out.println("휘발유 주유");
 		System.out.println("몇 리터를 넣으시겠습니까");
-		int payMoney = scanner.nextInt();
-		return (this.gasolineLeft - (driver.balance / gasPrice));
 	}
 
-	public int refuelingDiesel(Driver driver) {
+	public void refuelingDiesel() {
 		System.out.println("디젤 주유");
 		System.out.println("몇 리터를 넣으시겠습니까");
-		int payMoney = scanner.nextInt();
-		return (this.dieselLeft - (driver.balance / dieselPrice));
 	}
 	
 	
